@@ -3,7 +3,7 @@
 // Tworzenie prototypu funkcji
 void zamien(int* x, int* y);
 
-int main() {
+int z2() {
     int a = 5;
     int b = 8;
     printf("Przed zamiana: a = %d, b = %d\n", a, b);

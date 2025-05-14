@@ -3,7 +3,7 @@
 // Tworzenie prototypu funkcji
 void* moja_memcpy(void* cel, const void* zrodlo, int rozmiar);
 
-int main() {
+int z4() {
     char tekst1[] = "Hello!";
     char tekst2[10];
     moja_memcpy(tekst2, tekst1, 6);

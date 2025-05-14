@@ -3,7 +3,7 @@
 // Tworzenie prototypu funkcji
 void kopiuj_tablice(int* cel, int* zrodlo, int rozmiar);
 
-int main() {
+int z3() {
     int tab1[] = {1, 2, 3, 4, 5};
     int tab2[5];
     printf("Tablica przed kopiowaniem:\n");

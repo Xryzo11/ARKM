@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int z1() {
     int a = 10;
     int* wsk = &a;
     
