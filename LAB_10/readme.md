@@ -1,3 +1,7 @@
+Wykonane bez zadań dla chętnych
+
+---
+
 Konwersja liczb pomiędzy systemami liczbowymi w języku C
 
 Konwersja liczb całkowitych pomiędzy systemami: dziesiętnym (DEC), binarnym (BIN), ósemkowym (OCT) i szesnastkowym (HEX).
