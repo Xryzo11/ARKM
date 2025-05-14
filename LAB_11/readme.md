@@ -1,3 +1,7 @@
+Wykonane bez zadań dla chętnych
+
+---
+
 Celem ćwiczenia jest napisanie programu w języku C, który wczyta od użytkownika licznik i mianownik ułamka zwykłego i wypisze jego rozwinięcie w systemie binarnym (w postaci części całkowitej i części ułamkowej).
 
 Treść zadania:
