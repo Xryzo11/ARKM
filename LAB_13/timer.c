@@ -7,16 +7,16 @@ void startTimer();
 float stopTimer();
 float calculateTime();
 
-void startTimer() {
+void startTimer() { // Rozpoczyna pomiar czasu
     start = clock();
 }
 
-float stopTimer() {
+float stopTimer() { // Zatrzymuje pomiar czasu i zwraca czas w sekundach
     end = clock();
     return calculateTime();
 }
 
-float calculateTime() {
+float calculateTime() { // Oblicza czas w sekundach na podstawie różnicy między startem a końcem
     czas = (double)(end - start) / CLOCKS_PER_SEC;
     printf("Czas: %f sekundy\n", czas);
     return czas;

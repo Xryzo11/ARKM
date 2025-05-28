@@ -1,28 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Node {
+typedef struct Node { // Definicja węzła listy
     int data;
     struct Node* next;
 } Node;
 
-typedef struct List {
+typedef struct List { // Definicja listy
     Node* head;
     Node* tail;
     int size;
 } List;
 
-void initList(List* list) {
+void initList(List* list) { // Inicjalizacja listy
     list->head = NULL;
     list->tail = NULL;
     list->size = 0;
 }
 
-int getListSize(List* list) {
+int getListSize(List* list) { // Zwraca rozmiar listy
     return list->size;
 }
 
-void addToList(List* list, int data) {
+void addToList(List* list, int data) { // Dodanie elementu na koniec listy
     Node* newNode = (Node*)malloc(sizeof(Node));
     if (newNode == NULL) {
         printf("Nie można przydzielić pamięci\n");
@@ -40,7 +40,7 @@ void addToList(List* list, int data) {
     list->size++;
 }
 
-void addToListOnIndex(List* list, int data, int index) {
+void addToListOnIndex(List* list, int data, int index) { // Dodanie elementu na podany indeks w liście
     Node* newNode = (Node*)malloc(sizeof(Node));
     if (newNode == NULL) {
         printf("Nie można przydzielić pamięci\n");
@@ -73,13 +73,13 @@ void addToListOnIndex(List* list, int data, int index) {
     list->size++;
 }
 
-void fillList(List* list, int elements) {
+void fillList(List* list, int elements) { // Wypełnienie listy podaną liczbą elementów
     for (int i = 0; i < elements; i++) {
         addToList(list, i);
     }
 }
 
-void printList(List* list) {
+void printList(List* list) { // Wypisanie zawartości listy
     Node* current = list->head;
     while (current->next != NULL) {
         printf("%d -> ", current->data);
@@ -88,7 +88,7 @@ void printList(List* list) {
     printf("%d\n", current->data);
 }
 
-void printIndexes(List* list) {
+void printIndexes(List* list) { // Wypisanie indeksów elementów w liście
     int index = 0;
     Node* current = list->head;
     while (current->next != NULL) {
@@ -99,7 +99,7 @@ void printIndexes(List* list) {
     printf("%i\n", index);
 }
 
-int getFromList(List* list, int index) {
+int getFromList(List* list, int index) { // Pobranie elementu z listy na podanym indeksie
     if (index < 0 || index >= getListSize(list)) {
         printf("Niepoprawny numer indeksu\n");
         return -1;
@@ -111,7 +111,7 @@ int getFromList(List* list, int index) {
     return current->data;
 }
 
-int removeFromList(List* list, int index) {
+int removeFromList(List* list, int index) { // Usunięcie elementu z listy na podanym indeksie
     if (index < 0 || index >= getListSize(list)) {
         printf("Niepoprawny numer indeksu\n");
         return -1;
@@ -139,7 +139,7 @@ int removeFromList(List* list, int index) {
     return data;
 }
 
-void freeList(List* list) {
+void freeList(List* list) { // Zwolnienie pamięci zajmowanej przez listę
     Node* current = list->head;
     Node* nextNode;
     while (current != NULL) {
@@ -152,7 +152,7 @@ void freeList(List* list) {
     list->size = 0;
 }
 
-void testList(List* list) {
+void testList(List* list) { // Funkcja testująca działanie listy
     initList(list);
     addToList(list, 1);
     printf("Dodano element: %d\n", getFromList(list, 0));

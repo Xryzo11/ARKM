@@ -5,11 +5,14 @@
 #include "timer.c"
 
 int main() {
+    // Inicjalizacja listy i tablicy
     List list;
     int array[100000];
 
+    // Funkcja testowa listy
     // testList(&list);
 
+    // Pomiary czasów
     printf("Wypełnianie 1000 elementów w tablicy\n");
     preFillArray(array, 100000);
     startTimer();
@@ -102,6 +105,7 @@ int main() {
     float removeList = stopTimer();
     freeList(&list);
 
+    // Wyświetlenie zebranych wyników
     printf("\n");
     printf("----- Porównanie czasów -----\n");
     printf("Wypełnianie 1000 elementów: %.6f sekundy (tablica), %.6f sekundy (lista)\n", fillArray1k, fillList1k);
@@ -111,6 +115,7 @@ int main() {
     printf("Wypisywanie elementu o indeksie 5000: %.6f sekundy (tablica), %.6f sekundy (lista)\n", getArray, getList);
     printf("Usuwanie elementu o indeksie 1000: %.6f sekundy (tablica), %.6f sekundy (lista)\n", removeArray, removeList);
 
+    // Wyświetlenie różnicy czasów
     printf("\n");
     printf("----- Różnica czasów (tablica - lista) -----\n");
     printf("Wypełnianie 1000 elementów: %.6f sekundy\n", fillArray1k - fillList1k);

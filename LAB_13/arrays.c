@@ -1,10 +1,10 @@
-void preFillArray(int* array, int elements) {
+void preFillArray(int* array, int elements) { // Wstępne wypełnienie tablicy wartościami -1
     for (int i = 0; i < elements; i++) {
         array[i] = -1;
     }
 }
 
-void fillArray(int* array, int elements) {
+void fillArray(int* array, int elements) { // Dodanie na koniec tablicy podaną liczbę elementów
     int filled = 0;
     int i = 0;
     while (filled < elements) {
@@ -16,14 +16,14 @@ void fillArray(int* array, int elements) {
     }
 }
 
-void printArray(int* array, int size) {
+void printArray(int* array, int size) { // Wypisanie zawartości tablicy
     for (int i = 0; i < size; i++) {
         printf("%d ", array[i]);
     }
     printf("\n");
 }
 
-void addToArray(int* array, int size, int index, int data) {
+void addToArray(int* array, int size, int index, int data) { // Dodanie elementu w środek tablicy na podanym indeksie
     if (index < 0 || index > size) {
         return;
     }
@@ -33,7 +33,7 @@ void addToArray(int* array, int size, int index, int data) {
     array[index] = data;
 }
 
-void removeFromArray(int* array, int size, int index) {
+void removeFromArray(int* array, int size, int index) { // Usunięcie elementu z tablicy na podanym indeksie
     if (index < 0 || index >= size) {
         return;
     }
