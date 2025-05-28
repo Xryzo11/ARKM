@@ -1,4 +1,5 @@
 Wykonane bez zadań dla chętnych
+<br>Oryginalnie napisane w C++, ułomnie przetłumaczone na C
 
 ---
 
